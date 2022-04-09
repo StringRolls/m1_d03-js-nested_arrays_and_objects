@@ -38,6 +38,40 @@ const classroom = {
 
 console.log(classroom.carlos.friends.length)
 
-for(const friend of classroom
-    .carol
-    .friends) console.log(friend.name)
+for(const friend of classroom.carol.friends) console.log(friend.name)
+
+
+// Example 2
+
+    const drinks = [
+        {
+            name: 'Fanta',
+            sugar: true,
+            price: 1,
+            weight: .56,
+            ingredients: ['water', 'sugar', 'sweetener']
+        },
+        {
+            name: 'Jagger',
+            sugar: true,
+            price: 3,
+            weight: .96,
+            ingredients: ['fantasía', 'alcohol', 'mabad decisions']
+        }
+    ]
+
+    // Array of objects iteration
+    for (let i = 0; i < drinks.length; i++) {
+
+        console.log(`The drink ${drinks[i].name} weight ${drinks[i].weight}. The ingredientes are:`)
+
+        for (let j = 0; j < drinks[i].ingredients.length; j++) {
+            console.log('- ', drinks[i].ingredients[j])
+        }
+    }
+
+
+    drinks.forEach(drink => {
+        console.log(`The drink ${drink.name} weight ${drink.weight}. The ingredients are:`)
+        drink.ingredients.forEach(ing => console.log('- ', ing))
+    })
